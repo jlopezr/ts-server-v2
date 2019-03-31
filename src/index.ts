@@ -1,4 +1,3 @@
-import * as express from 'express';
 import * as winston from 'winston';
 
 const log = winston.createLogger({

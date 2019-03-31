@@ -3,8 +3,11 @@ import * as cors from 'cors';
 import * as express from 'express';
 import {Request, Response} from 'express';
 import * as methodOverride from 'method-override';
+import * as mongoose from 'mongoose';
 import * as logger from 'morgan';
 import * as winston from 'winston';
+import PostsController from './controllers/posts';
+import UsersController from './controllers/users';
 
 const app = express();
 
@@ -16,6 +19,9 @@ const log = winston.createLogger({
           })
     ]
   });
+
+// Configure MongoDB
+//mongoose.connect('mongodb://localhost/jander', {useNewUrlParser: true});
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -30,5 +36,8 @@ app.get('/', (req: Request, res: Response) => {
 app.get("/hello", (req: Request, res: Response) => {
     res.json({hello:"world"});
 });
+
+app.use('/api/posts', new PostsController().router);
+app.use('/api/users', new UsersController().router);
 
 module.exports = app;

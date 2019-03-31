@@ -4,5 +4,6 @@
   },
   "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
-  "coverageReporters": ["lcov", "text", "html"]
+  "coverageReporters": ["lcov", "text", "html"],
+  "collectCoverageFrom": ["src/**/*.{ts,js}"]  
 }
