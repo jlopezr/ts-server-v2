@@ -61,13 +61,13 @@
     "ts-jest": "^24.0.1",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
-    "typedoc": "^0.14.2",
+    "typedoc": "^0.15.2",
     "typescript": "^3.3.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "method-override": "^3.0.0",
     "mongoose": "^5.4.20",
     "morgan": "^1.9.1",
